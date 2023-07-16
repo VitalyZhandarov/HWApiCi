@@ -13,7 +13,7 @@ public class MobileBankTest {
                 .when()
                 .get("/demo/accounts")
 
-                .then()
+                .then().log().all()
                     .statusCode(200)
                     .body(matchesJsonSchemaInClasspath("accounts.schema.json"));
     }
